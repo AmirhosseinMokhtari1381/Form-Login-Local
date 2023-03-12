@@ -33,7 +33,7 @@ app.Use(async (context, next) =>
     //if (url.ToLower() == "/home/index")
     //{
     //    //in miyad yek header dorsot mikone 
-    //    //context.Response.Headers.Add("customHeader", "Amirhossein");
+    //    //context.Response.Headers.Add("customHeader", "Ghazanfar");
     //    //vagti az in estefade mishe dige be middleware dige nmire 
     //    //await context.Response.WriteAsync("dige tamom shod be middleware badi nemire ");
     //}
