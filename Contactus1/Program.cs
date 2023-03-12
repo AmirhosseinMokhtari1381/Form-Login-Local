@@ -85,7 +85,7 @@ static void Test(IApplicationBuilder app)
     {
         config2.Run(async (context) =>
         {
-            await context.Response.WriteAsync("Run Index Page");
+            await context.Response.WriteAsync("Run index Page");
         });
     });
 
