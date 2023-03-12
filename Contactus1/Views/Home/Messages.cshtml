@@ -1,0 +1,58 @@
+﻿@model List<Contactus1.Models.Message>
+@{
+    var counter = 1;
+}
+@section Style
+    {
+
+    <style>
+        thead th {
+            text-align: right;
+        }
+
+        thead {
+            box-shadow: 0 0 2px 0 gray;
+            background: #0000000d;
+        }
+
+        body {
+            background-image: url('/images/bg-01.jpg');
+            background-size: cover;
+        }
+   </style>
+}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            لیست پیام ها
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>عنوان</th>
+                        <th>نام و نام خانوادگی</th>
+                        <th>پیام</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <td>@counter</td>
+                            <td>@item.Subject</td>
+                            <td>@item.FullName</td>
+                            <td>@item.PhoneNumber</td>
+                        </tr>
+                        counter = +1;
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
