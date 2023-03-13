@@ -1,11 +1,27 @@
 ﻿@model Contactus1.Models.Message
-
+@{
+    ViewData["Title"] = "ثبت پیام";
+    var message = ViewBag.message.ToString();
+    var message2 = ViewData["Message2"].ToString();
+    
+}
 <div class="container-login100" style="background-image:url('/images/bg-01.jpg');">
     <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
         <form method="post" action="/home/SendMessage" class="login100-form validate-form">
             <span class="login100-form-title p-b-49">
                 تماس با ما
             </span>
+           @* <div class="alert alert-success">
+              ViewBag  @message
+            </div>
+            <div class="alert alert-danger">
+              ViewData  @message2
+            </div>*@
+@*
+             <div class="alert alert-danger">
+             TempData   @message3
+            </div>*@
+
             <div class="wrap-input100 validate-input m-b-23" data-validate="نام را وارد کنید">
                 <span class="label-input100">نام و نام خانوادگی</span>
                 <input asp-for="FullName"  autocomplete="off" class="input100" type="text" placeholder="نام خود را وارد کنید">

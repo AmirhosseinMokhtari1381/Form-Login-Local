@@ -1,6 +1,9 @@
 ﻿@model List<Contactus1.Models.Message>
 @{
+    ViewData["Title"] = "پیام ها";
     var counter = 1;
+    var message3 = TempData["IsSuccess"];
+
 }
 @section Style
     {
@@ -26,6 +29,19 @@
         <div class="card-header">
             لیست پیام ها
         </div>
+
+        @if (message3 != null)
+        {
+            <div class="alert alert-success">
+                عملیات با موفقیت انجام شد
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success">
+                Eror
+            </div>
+        }
         <div class="card-body">
             <table class="table table-bordered text-center">
                 <thead>

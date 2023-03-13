@@ -35,7 +35,7 @@ app.Use(async (context, next) =>
     //    //in miyad yek header dorsot mikone 
     //    //context.Response.Headers.Add("customHeader", "Ghazanfar");
     //    //vagti az in estefade mishe dige be middleware dige nmire 
-    //    //await context.Response.WriteAsync("dige tamom shod be middleware badi nemire ");
+    //    //await context.Response.WriteAsync("dige tamom shod be MiddleWare badi nemire ");
     //}
     await next();
     //MoreLogic 
@@ -53,7 +53,7 @@ app.Use(async (context, next) =>
 
 //app.MapWhen(contex=>shart,method)
 
-//app.MapWhen(context =>context.Request.Query.ContainsKey("test") , MapWhenMehod);
+//app.MapWhen(context =>context.Request.Query.ContainsKey("Admin") , MapWhenMehod);
 
 //app.Map("/home", Test);
 

@@ -8,6 +8,9 @@ namespace ContactForm_US.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.message = "Salam";
+            ViewData["Message2"] = "Amirhossein";
+            TempData["Message3"] = "Mokhtari";
             return View();
         }
 
@@ -20,7 +23,12 @@ namespace ContactForm_US.Controllers
         [HttpPost]
         public IActionResult SendMessage(Message message)
         {
-            DataBase.Messagess.Add(message);    
+            if (message.PhoneNumber.Length == 11)
+            {
+                TempData["IsSuccess"] = true;
+                DataBase.Messagess.Add(message);
+            }
+              
             return Redirect("/home/Messages");
         }
     }
