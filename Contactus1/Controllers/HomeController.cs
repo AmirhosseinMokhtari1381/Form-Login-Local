@@ -23,6 +23,10 @@ namespace ContactForm_US.Controllers
         [HttpPost]
         public IActionResult SendMessage(Message message)
         {
+            if(!ModelState.IsValid)
+            {
+                return View("index", message);
+            }
             if (message.PhoneNumber.Length == 11)
             {
                 TempData["IsSuccess"] = true;

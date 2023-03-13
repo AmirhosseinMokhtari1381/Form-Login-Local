@@ -2,52 +2,60 @@
 @{
     ViewData["Title"] = "ثبت پیام";
     var message = ViewBag.message.ToString();
-    var message2 = ViewData["Message2"].ToString();
-    
+    var message2 = ViewData["Message2"];
+
 }
 <div class="container-login100" style="background-image:url('/images/bg-01.jpg');">
     <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
         <form method="post" action="/home/SendMessage" class="login100-form validate-form">
+            <div asp-validation-summary="All"></div>
             <span class="login100-form-title p-b-49">
                 تماس با ما
             </span>
-           @* <div class="alert alert-success">
-              ViewBag  @message
+           @* <input asp-for="COde" class="form-control" />*@
+            @* <div class="alert alert-success">
+            ViewBag  @message
             </div>
             <div class="alert alert-danger">
-              ViewData  @message2
+            ViewData  @message2
             </div>*@
-@*
-             <div class="alert alert-danger">
-             TempData   @message3
+            @*
+            <div class="alert alert-danger">
+            TempData   @message3
             </div>*@
 
-            <div class="wrap-input100 validate-input m-b-23" data-validate="نام را وارد کنید">
-                <span class="label-input100">نام و نام خانوادگی</span>
-                <input asp-for="FullName"  autocomplete="off" class="input100" type="text" placeholder="نام خود را وارد کنید">
-                <span class="focus-input100"></span>
+            <div class="wrap-input100 validate-input m-b-23">
+                <label asp-for="FullName" class="label-input100"></label>
+                <input asp-for="FullName" autocomplete="off" class="input100" type="text" placeholder="نام خود را وارد کنید">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
 
-            <div class="wrap-input100 validate-input m-b-23" data-validate="موضوع پیام خود را مشخص کنید">
-                <span class="label-input100">موضوع پیام</span>
+            <div class="wrap-input100 validate-input m-b-23">
+                <label asp-for="Subject" class="label-input100"></label>
                 <input asp-for="Subject" autocomplete="off" class="input100" type="text" placeholder="موضوع پیام خورد را بنویسید">
-                <span class="focus-input100"></span>
+                <span asp-validation-for="Subject" class="text-danger"></span>
+
             </div>
-            <div class="wrap-input100 validate-input m-b-23" data-validate="شماره تماس را وارد کنید">
-                <span class="label-input100">شماره تماس</span>
+            <div class="wrap-input100 validate-input m-b-23">
+                <label asp-for="PhoneNumber" class="label-input100"></label>
                 <input asp-for="PhoneNumber" autocomplete="off" class="input100" type="text" placeholder="شماره تماس خود را وارد کنید">
-                <span class="focus-input100"></span>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            <div class="wrap-input100 validate-input m-b-23" data-validate="متن پیام اجباری است">
-                <span class="label-input100">متن پیام</span>
+            @* <div class="wrap-input100 validate-input m-b-23">
+                <label asp-for="confirmPhoneNumber" class="label-input100"></label>
+                <input asp-for="confirmPhoneNumber" autocomplete="off" class="input100" type="text" placeholder="شماره تماس خود را وارد کنید">
+                <span asp-validation-for="confirmPhoneNumber" class="text-danger"></span>
+            </div>*@
+            <div class="wrap-input100 validate-input m-b-23">
+                <label asp-for="MessageBody" class="label-input100"></label>
                 <textarea asp-for="MessageBody" autocomplete="off" class="input100" type="text" placeholder="پیام خود را در این قسمت بنویسد">
                         </textarea>
-                <span class="focus-input100"></span>
+                <span asp-validation-for="MessageBody" class="text-danger"></span>
             </div>
             <div class="container-login100-form-btn mt-4">
                 <div class="wrap-login100-form-btn">
                     <div class="login100-form-bgbtn"></div>
-                    <button  type="submit" class="login100-form-btn">
+                    <button type="submit" class="login100-form-btn">
                         ارسال
                     </button>
                 </div>
@@ -56,9 +64,10 @@
     </div>
 </div>
 
+
+
 @section Scripts
     {
-    <script>
-        alert("Render Section Scripts");
-    </script>
+    <script src="/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 }

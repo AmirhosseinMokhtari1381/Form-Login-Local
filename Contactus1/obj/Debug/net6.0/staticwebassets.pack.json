@@ -301,6 +301,54 @@
       "PackagePath": "staticwebassets\\images\\icons\\favicon.ico"
     },
     {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\jquery\\dist\\jquery.min.map"
+    },
+    {
       "Id": "D:\\LearnQ\\FaslAVAL\\Contactus1\\Contactus1\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
