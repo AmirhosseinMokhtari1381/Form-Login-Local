@@ -1,8 +1,20 @@
-﻿@model List<Contactus1.Models.Message>
+﻿@using Contactus1.Models;
+@model List<Contactus1.Models.Message>
 @{
     ViewData["Title"] = "پیام ها";
     var counter = 1;
     var message3 = TempData["IsSuccess"];
+    var partialView = new List<Message>()
+    {
+        new Message()
+        {
+            FullName="امیرحسین مختاری",
+            PhoneNumber="09224940113",
+            MessageBody="خوبی..",
+            Subject="تشکر.."
+        }
+    };
+ 
 
 }
 @section Style
@@ -22,7 +34,7 @@
             background-image: url('/images/bg-01.jpg');
             background-size: cover;
         }
-   </style>
+    </style>
 }
 <div class="container">
     <div class="card">
@@ -43,34 +55,10 @@
             </div>
         }
         <div class="card-body">
-            <table class="table table-bordered text-center">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>عنوان</th>
-                        <th>شماره تماس</th>
-                        <th>نام و نام خانوادگی</th>
-                        <th>پیام</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-
-                        <tr>
-                            <td>@counter</td>
-                            <td>@item.Subject</td>
-                            <th>
-                                <call phone-number="@item.PhoneNumber"></call>
-                            </th>
-                            <td>@item.FullName</td>
-                            <td>@item.PhoneNumber</td>
-                        </tr>
-                        counter = +1;
-                    }
-                </tbody>
-
-            </table>
+            <partial name="_Message" />
+        </div>
+        <div class="card-body">
+            @await Html.PartialAsync("_Message",partialView);
         </div>
     </div>
 </div>

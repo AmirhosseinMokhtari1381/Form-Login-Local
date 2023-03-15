@@ -1,0 +1,33 @@
+﻿@model List<Contactus1.Models.Message>
+@{
+    var counter = 1;
+}
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>عنوان</th>
+            <th>شماره تماس</th>
+            <th>نام و نام خانوادگی</th>
+            <th>پیام</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@counter</td>
+                <td>@item.Subject</td>
+                <th>
+                    <call phone-number="@item.PhoneNumber"></call>
+                </th>
+                <td>@item.FullName</td>
+                <td>@item.PhoneNumber</td>
+            </tr>
+            counter = +1;
+        }
+    </tbody>
+
+</table>
