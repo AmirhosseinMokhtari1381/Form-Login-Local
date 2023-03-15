@@ -55,7 +55,8 @@
             </div>
         }
         <div class="card-body">
-            <partial name="_Message" />
+            @*<partial name="_Message" />*@
+            @await Component.InvokeAsync("Messages");
         </div>
         <div class="card-body">
             @await Html.PartialAsync("_Message",partialView);
