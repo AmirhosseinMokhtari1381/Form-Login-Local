@@ -6,12 +6,18 @@ namespace ContactForm_US.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            ViewBag.message = "Salam";
+            ViewBag.message = id;
             ViewData["Message2"] = "Amirhossein";
             TempData["Message3"] = "Mokhtari";
             return View();
+        }
+
+        [HttpGet("/codeYad/Privacy/{name}/{id:int}")]
+        public IActionResult Privacy(string name, int id, string address)
+        {
+            return View(model: name);
         }
 
         public IActionResult Messages()

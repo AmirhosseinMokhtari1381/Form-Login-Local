@@ -10,9 +10,9 @@
         <form method="post" action="/home/SendMessage" class="login100-form validate-form">
             <div asp-validation-summary="All"></div>
             <span class="login100-form-title p-b-49">
-                تماس با ما
+                تماس با ما @ViewBag.message
             </span>
-           @* <input asp-for="COde" class="form-control" />*@
+            @* <input asp-for="COde" class="form-control" />*@
             @* <div class="alert alert-success">
             ViewBag  @message
             </div>
@@ -42,9 +42,9 @@
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             @* <div class="wrap-input100 validate-input m-b-23">
-                <label asp-for="confirmPhoneNumber" class="label-input100"></label>
-                <input asp-for="confirmPhoneNumber" autocomplete="off" class="input100" type="text" placeholder="شماره تماس خود را وارد کنید">
-                <span asp-validation-for="confirmPhoneNumber" class="text-danger"></span>
+            <label asp-for="confirmPhoneNumber" class="label-input100"></label>
+            <input asp-for="confirmPhoneNumber" autocomplete="off" class="input100" type="text" placeholder="شماره تماس خود را وارد کنید">
+            <span asp-validation-for="confirmPhoneNumber" class="text-danger"></span>
             </div>*@
             <div class="wrap-input100 validate-input m-b-23">
                 <label asp-for="MessageBody" class="label-input100"></label>
@@ -60,6 +60,8 @@
                     </button>
                 </div>
             </div>
+            @* RouteConfig*@
+            @*<a class="btn btn-success" href="@Url.Action(action:"Messages",controller:"Home")">Send</a>*@
         </form>
     </div>
 </div>

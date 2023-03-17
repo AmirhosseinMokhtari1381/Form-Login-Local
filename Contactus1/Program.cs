@@ -1,6 +1,8 @@
 using static System.Net.Mime.MediaTypeNames;
 using System.Diagnostics.Metrics;
 using Contactus1.MiddleWare;
+using Microsoft.AspNetCore.Mvc;
+using Contactus1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,6 +68,11 @@ app.UseTestM();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "Test",
+    pattern: "/codeyad",
+    defaults: new { Controller = "Home", action = "Messages" });
 
 app.Run();
 
